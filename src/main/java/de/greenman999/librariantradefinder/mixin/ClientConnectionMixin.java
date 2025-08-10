@@ -82,6 +82,9 @@ public class ClientConnectionMixin {
         TradeFinder.stop();
         found.set(true);
 
+        // Pling Sound abspielen, unabhängig von den Soundeinstellungen
+        de.greenman999.librariantradefinder.PlingUtils.playPling();
+
         MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(
                 Text.translatable(
                         "librarian-trade-finder.found",
